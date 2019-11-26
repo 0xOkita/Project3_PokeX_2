@@ -2,8 +2,6 @@ package com.khoa.project3_pokex;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,17 +13,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-/**
- * Created by Aws on 28/01/2018.
- */
-
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
+public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.MyViewHolder> {
 
     private Context mContext ;
     private List<Pokemon> mData ;
 
 
-    public RecyclerViewAdapter(Context mContext, List<Pokemon> mData) {
+    public RecycleViewAdapter(Context mContext, List<Pokemon> mData) {
         this.mContext = mContext;
         this.mData = mData;
     }
@@ -42,17 +36,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(MyViewHolder holder, final int position) {
 
-        holder.tv_book_title.setText(mData.get(position).getTitle());
-        holder.img_book_thumbnail.setImageResource(mData.get(position).getThumbnail());
+        holder.name.setText(mData.get(position).getName());
+        holder.img_pokemon_thumbnail.setImageResource(mData.get(position).getThumbnail());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(mContext,Book_Activity.class);
+                Intent intent = new Intent(mContext,DescriptionPokemon.class);
 
                 // passing data to the book activity
-                intent.putExtra("Title",mData.get(position).getTitle());
-                intent.putExtra("Description",mData.get(position).getDescription());
+                intent.putExtra("name",mData.get(position).getName());
+                intent.putExtra("id",mData.get(position).getId());
                 intent.putExtra("Thumbnail",mData.get(position).getThumbnail());
                 // start the activity
                 mContext.startActivity(intent);
@@ -71,15 +65,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView tv_book_title;
-        ImageView img_book_thumbnail;
+        TextView name;
+        ImageView img_pokemon_thumbnail;
         CardView cardView ;
 
         public MyViewHolder(View itemView) {
             super(itemView);
 
-            tv_book_title = (TextView) itemView.findViewById(R.id.book_title_id) ;
-            img_book_thumbnail = (ImageView) itemView.findViewById(R.id.book_img_id);
+            name = (TextView) itemView.findViewById(R.id.pokemon_title_id) ;
+            img_pokemon_thumbnail = (ImageView) itemView.findViewById(R.id.pokemon_img_id);
             cardView = (CardView) itemView.findViewById(R.id.cardview_id);
 
 

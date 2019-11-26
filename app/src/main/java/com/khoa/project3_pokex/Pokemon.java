@@ -2,14 +2,15 @@ package com.khoa.project3_pokex;
 
 public class Pokemon {
     String name, attack, defense, type;
-    int id;
+    int id, Thumbnail ;
 
-    public Pokemon(String name, String attack, String defense, String type, int id) {
+    public Pokemon(String name, String attack, String defense, String type, int id, int thumbnail) {
         this.name = name;
         this.attack = attack;
         this.defense = defense;
         this.type = type;
         this.id = id;
+        Thumbnail = thumbnail;
     }
 
     public String getName() {
@@ -50,5 +51,13 @@ public class Pokemon {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getThumbnail() {
+        return Thumbnail;
+    }
+
+    public void setThumbnail(int thumbnail) {
+        Thumbnail = thumbnail;
     }
 }
