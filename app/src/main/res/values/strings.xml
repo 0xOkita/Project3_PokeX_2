@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Project3_PokeX</string>
+    <string name="btn_1">Pokedex</string>
+    <string name="btn_2">I choose you</string>
+    <string name="btn_3">Trainning</string>
+    <string name="attack_filter">Attack</string>
+    <string name="defense_filter">Defense</string>
+</resources>

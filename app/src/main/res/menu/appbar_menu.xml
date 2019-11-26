@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_i_choose_you"
+        android:title="@string/btn_2"
+        android:icon="@drawable/app_bar_i_choose_you"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/action_pokedex"
+        android:title="@string/btn_1"
+        android:icon="@drawable/app_bar_training"
+        app:showAsAction="ifRoom"/>
+
+
+</menu>

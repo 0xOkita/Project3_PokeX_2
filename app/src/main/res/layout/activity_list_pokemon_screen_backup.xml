@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/background_list_pkm"
+    android:background="@drawable/background_psychic_type"
+    tools:context=".ListPokemonScreen">
+
+    <GridLayout
+        android:id="@+id/light_grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:columnCount="3"
+        android:rowCount="4"
+        android:scrollbars="horizontal"
+        android:useDefaultMargins="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_attack_filter"
+        app:layout_constraintVertical_bias="0.52">
+
+        <Button
+            style="@style/list_pokemon_gridlayout"
+            android:background="@drawable/latias" />
+
+        <Button
+            style="@style/list_pokemon_gridlayout"
+            android:background="@drawable/alakazam" />
+
+        <Button
+            style="@style/list_pokemon_gridlayout"
+            android:background="@drawable/mewtwo" />
+
+        <Button
+            style="@style/list_pokemon_gridlayout"
+            android:background="@drawable/mewtwo" />
+
+        <Button style="@style/list_pokemon_gridlayout" />
+
+        <Button style="@style/list_pokemon_gridlayout" />
+
+        <Button style="@style/list_pokemon_gridlayout" />
+
+        <Button style="@style/list_pokemon_gridlayout" />
+
+        <Button style="@style/list_pokemon_gridlayout" />
+
+        <Button style="@style/list_pokemon_gridlayout" />
+
+        <Button style="@style/list_pokemon_gridlayout" />
+
+        <Button style="@style/list_pokemon_gridlayout" />
+
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/button_attack_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorBlack"
+        android:text="@string/attack_filter"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.269"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_defense_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
+        android:text="@string/defense_filter"
+        app:layout_constraintBottom_toBottomOf="@+id/button_attack_filter"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/colorBlack"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintTop_toTopOf="@+id/button_attack_filter"
+        app:layout_constraintVertical_bias="1.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

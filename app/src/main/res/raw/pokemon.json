@@ -1,0 +1,18 @@
+{
+  "pokemon":[
+    {
+      "id":"1",
+      "name":"Chinchou",
+      "type":"electric",
+      "attack":"134",
+      "defense":"98"
+    },
+    {
+      "id":"2",
+      "name":"Mewtwo",
+      "type":"psychic",
+      "attack":"299",
+      "defense":"398"
+    }
+  ]
+}
